@@ -19,8 +19,8 @@ def is_connected():
 
 def MailSender(filename,time):
     try:
-        fromaddr = "borse911shubham@gmail.com"
-        toaddr = "shubhamborse0911@gmail.com"
+        fromaddr = "shubhamborse0911@gmail.com"
+        toaddr = "borse911shubham@gmail.com"
 
         msg = MIMEMultipart()
 
@@ -66,7 +66,7 @@ def MailSender(filename,time):
 
         s.starttls()
 
-        s.login(fromaddr,"------")
+        s.login(fromaddr,"cgxp qnya iogr hgpv")
 
         text = msg.as_string()
 
@@ -89,7 +89,7 @@ def ProcessLog(log_dir = 'Marvellous'):
             pass
 
     separator = "-" * 80
-    log_path = os.path.join(log_dir,"Marvellous%s.log"%(time.ctime()))
+    log_path = os.path.join(log_dir,"Marvellous%s.txt"%(time.ctime()))
     f = open(log_path,'w')
     f.write(separator+"\n")
     f.write("Marvellous Infosystems Process Logger : "+time.ctime() + "\n")
@@ -139,7 +139,7 @@ def main():
         exit()
 
     try:
-        schedule.every(int(argv[1])).minutes.do(ProcessLog)
+        schedule.every(int(argv[10])).seconds.do(ProcessLog)
         while True:
             schedule.run_pending()
             time.sleep(1)
