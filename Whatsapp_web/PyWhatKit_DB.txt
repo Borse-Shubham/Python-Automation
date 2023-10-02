@@ -1,0 +1,15 @@
+Date: 1/10/2023
+Time: 23:57
+Phone Number: +919881424021
+Message: HHHHHH
+--------------------
+Date: 2/10/2023
+Time: 0:5
+Phone Number: +1234567890
+Message: Hello, this is an automated message from your Python script!
+--------------------
+Date: 2/10/2023
+Time: 0:9
+Phone Number: +919881424021
+Message: Hello, this is an automated message from your Python script!
+--------------------
