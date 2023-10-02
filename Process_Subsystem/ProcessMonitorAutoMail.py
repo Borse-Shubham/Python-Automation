@@ -1,7 +1,7 @@
 import os
 import time
 import psutil
-import urllib.request
+import urllib.request asurllib2
 import smtplib
 import schedule 
 from sys import *
@@ -12,9 +12,9 @@ from email.mime.multipart import MIMEMultipart
 
 def is_connected():
     try:
-        urllib.request.urlopen('http://216.58.192.142',timeout = 1)
+        urllib2.urlopen('http://216.58.192.142',timeout = 1)
         return True
-    except urllib.request.URLError as err:
+    except urllib2.URLError as err:
         return False
 
 def MailSender(filename,time):
@@ -54,7 +54,7 @@ def MailSender(filename,time):
 
         p = MIMEBase('application', 'octet-stream')
 
-        p.se_payload((attachment).read())
+        p.set_payload((attachment).read())
 
         encoders.encode_base64(p)
 
@@ -139,7 +139,7 @@ def main():
         exit()
 
     try:
-        schedule.every(int(argv[10])).seconds.do(ProcessLog)
+        schedule.every(int(argv[1])).seconds.do(ProcessLog)
         while True:
             schedule.run_pending()
             time.sleep(1)
